@@ -17,6 +17,8 @@ import Features from "@/components/features";
 import Cta from "@/components/cta";
 import Proof from "@/components/proof";
 import IncomePotential from "@/components/income-potential";
+import FAQ from "@/components/faq";
+import LimitedPositions from "@/components/limited-positions";
 
 export default function Home() {
   return (
@@ -27,6 +29,8 @@ export default function Home() {
       <Proof />
       <Workflows />
       <Features />
+      <FAQ />
+      <LimitedPositions />
       <Cta />
     </>
   );
