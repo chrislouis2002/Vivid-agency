@@ -1,4 +1,4 @@
-import VideoThumb from "@/public/images/vivid-hero.jpg";
+import VideoThumb from "@/images/vivid-hero.jpg";
 import ModalVideo from "@/components/modal-video";
 
 export default function HeroHome() {
