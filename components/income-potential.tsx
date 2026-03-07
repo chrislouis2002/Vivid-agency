@@ -39,35 +39,35 @@ image: "/images/streamer2.jpg",
     image: "/images/streamer5.jpg",
     earnings: 680000,
     testimonial:
-      "This was the best work opportunity I’ve had in years.",
+      "I was nervous at first, but the training and support made everything easy. By the end of my contract, I had earned more than I expected.",
   },
   {
     name: "Lulu",
     image: "/images/streamer6.jpg",
     earnings: 1880000,
     testimonial:
-      "This was the best work opportunity I’ve had in years.",
+      "The daily allowance really helped me stay motivated. Seeing the money come in every day made a huge difference.",
   },
   {
     name: "Ria",
     image: "/images/streamer7.jpg",
     earnings: 1050000,
     testimonial:
-      "This was the best work opportunity I’ve had in years.",
+      "joined hoping to make some extra money, but I ended up saving enough to pay off several bills.",
   },
   {
     name: "Ada",
     image: "/images/streamer8.jpg",
     earnings: 730000,
     testimonial:
-      "This was the best work opportunity I’ve had in years.",
+      "I didn’t realize how much opportunity there was until I finished my first contract. I’m already planning my next one.",
   },
   {
     name: "Oyinda",
     image: "/images/streamer9.jpg",
     earnings: 1350000,
     testimonial:
-      "This was the best work opportunity I’ve had in years.",
+      "The team helped me improve quickly, and once I passed my target the bonuses added up fast.",
   },
 ];
 
