@@ -54,7 +54,7 @@ export default function HeroHome() {
                     href="https://wa.me/2349137385418"
                     target="_blank"
                   >
-                    Chat Recruiter
+                    Chat Admin
                   </a>
                 </div>
 
