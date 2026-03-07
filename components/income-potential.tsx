@@ -8,36 +8,64 @@ import Spotlight from "@/components/spotlight";
 const streamers = [
   {
     name: "Maya",
-    image: "/images/vivid-hero.jpg",
+    image: "/images/streamer1.jpg",
     earnings: 870000,
     testimonial:
       "This contract completely changed my situation. I was able to save money and support my family.",
   },
   {
-    name: "Sophia",
-image: "/images/vivid-hero.jpg",
-    earnings: 760000,
+    name: "Ivie",
+image: "/images/streamer2.jpg",
+    earnings: 1560000,
     testimonial:
       "The daily allowance helped me so much while working. The support team was amazing.",
   },
   {
     name: "Lina",
-    image: "/images/vivid-hero.jpg",
+    image: "/images/streamer3.jpg",
     earnings: 920000,
     testimonial:
       "I didn't expect to earn this much in just 3 months. I'm signing another contract.",
   },
   {
     name: "Zara",
-    image: "/images/vivid-hero.jpg",
+    image: "/images/streamer4.jpg",
     earnings: 810000,
     testimonial:
       "The training made it easy to start and the bonuses were very motivating.",
   },
   {
     name: "Emily",
-    image: "/images/vivid-hero.jpg",
-    earnings: 880000,
+    image: "/images/streamer5.jpg",
+    earnings: 680000,
+    testimonial:
+      "This was the best work opportunity I’ve had in years.",
+  },
+  {
+    name: "Lulu",
+    image: "/images/streamer6.jpg",
+    earnings: 1880000,
+    testimonial:
+      "This was the best work opportunity I’ve had in years.",
+  },
+  {
+    name: "Ria",
+    image: "/images/streamer7.jpg",
+    earnings: 1050000,
+    testimonial:
+      "This was the best work opportunity I’ve had in years.",
+  },
+  {
+    name: "Ada",
+    image: "/images/streamer8.jpg",
+    earnings: 730000,
+    testimonial:
+      "This was the best work opportunity I’ve had in years.",
+  },
+  {
+    name: "Oyinda",
+    image: "/images/streamer9.jpg",
+    earnings: 1350000,
     testimonial:
       "This was the best work opportunity I’ve had in years.",
   },
