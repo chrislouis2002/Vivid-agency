@@ -16,12 +16,14 @@ import Workflows from "@/components/workflows";
 import Features from "@/components/features";
 import Cta from "@/components/cta";
 import Proof from "@/components/proof";
+import IncomePotential from "@/components/income-potential";
 
 export default function Home() {
   return (
     <>
       <PageIllustration />
       <Hero />
+      <IncomePotential />
       <Proof />
       <Workflows />
       <Features />
