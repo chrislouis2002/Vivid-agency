@@ -1,6 +1,6 @@
 import Image from "next/image";
-import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
-import BlurredShape from "@/public/images/blurred-shape.svg";
+const blurredShapeGray = "/images/blurred-shape-gray.svg";
+const blurredShape = "/images/blurred-shape.svg";
 
 const benefits = [
   {
@@ -48,7 +48,7 @@ export default function Features() {
       {/* Background blur shapes */}
       <div className="pointer-events-none absolute left-1/2 top-0 -z-10 -mt-20 -translate-x-1/2">
         <Image
-          src={BlurredShapeGray}
+          src={blurredShapeGray}
           width={760}
           height={668}
           alt=""
@@ -58,7 +58,7 @@ export default function Features() {
 
       <div className="pointer-events-none absolute bottom-0 left-1/2 -z-10 -mb-80 -translate-x-[120%] opacity-50">
         <Image
-          src={BlurredShape}
+          src={blurredShape}
           width={760}
           height={668}
           alt=""
