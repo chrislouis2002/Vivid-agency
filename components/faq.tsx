@@ -69,7 +69,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="py-20 md:py-28">
+    <section id="faq" className="py-20 md:py-28">
 
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
 
