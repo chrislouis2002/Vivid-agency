@@ -19,7 +19,7 @@ export default function Header() {
 
             <li>
               <Link
-                href="/signin"
+                href="https://tally.so/r/Np7a5l"
                 className="btn-sm relative bg-blue-800 py-[5px] px-3 text-white rounded hover:bg-gray-700 transition-colors duration-300"
               >
                 Apply Now
