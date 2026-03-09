@@ -15,24 +15,24 @@ const benefits = [
     description:
       "Professional devices and fast, reliable internet ensure smooth streaming with zero technical stress.",
   },
-  {
-    icon: "🎥",
-    title: "Professional Streaming Setup",
-    description:
-      "Work in a fully prepared streaming environment designed to help you look professional and attract viewers.",
-  },
-  {
-    icon: "💰",
-    title: "Competitive Contract Earnings",
-    description:
-      "Transparent contracts with competitive payouts so your effort directly translates into income.",
-  },
-  {
-    icon: "📈",
-    title: "Performance Bonuses",
-    description:
-      "Unlock additional rewards and bonuses as you grow your audience and reach performance milestones.",
-  },
+  // {
+  //   icon: "🎥",
+  //   title: "Professional Streaming Setup",
+  //   description:
+  //     "Work in a fully prepared streaming environment designed to help you look professional and attract viewers.",
+  // },
+  // {
+  //   icon: "💰",
+  //   title: "Competitive Contract Earnings",
+  //   description:
+  //     "Transparent contracts with competitive payouts so your effort directly translates into income.",
+  // },
+  // {
+  //   icon: "📈",
+  //   title: "Performance Bonuses",
+  //   description:
+  //     "Unlock additional rewards and bonuses as you grow your audience and reach performance milestones.",
+  // },
   {
     icon: "🤝",
     title: "Training & Ongoing Support",

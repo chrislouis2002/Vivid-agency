@@ -26,14 +26,14 @@ export default function Header() {
               </Link>
             </li>
 
-            {/* <li>
+            <li>
               <Link
                 href="/signin"
                 className="btn-sm relative bg-gray-800 py-[5px] px-3 text-white rounded hover:bg-gray-700 transition-colors duration-300"
               >
                 Sign In
               </Link>
-            </li> */}
+            </li>
 
             {/* <li>
               <Link
@@ -45,7 +45,8 @@ export default function Header() {
             </li> */}
 
              <Link
-  href="https://wa.me/234XXXXXXXXXX"
+  href="https://wa.me/2349137385418"
+
   target="_blank"
   className="inline-flex items-center gap-2 bg-green-500 px-5 py-2 rounded-lg text-white font-semibold shadow-lg hover:bg-green-600 hover:scale-105 transition-all duration-300"
 >
