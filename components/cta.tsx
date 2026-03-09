@@ -49,7 +49,7 @@ export default function Cta() {
               <div data-aos="fade-up" data-aos-delay={200}>
                 <a
                   className="btn group mb-4 w-full bg-linear-to-t from-blue-800 to-blue-500 text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:from-indigo-500 hover:to-indigo-400 sm:mb-0 sm:w-auto"
-                  href="https://tally.so/r/Np7a5l"
+                 href="/#faq"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
