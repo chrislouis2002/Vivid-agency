@@ -19,11 +19,13 @@ import Proof from "@/components/proof";
 import IncomePotential from "@/components/income-potential";
 import FAQ from "@/components/faq";
 import LimitedPositions from "@/components/limited-positions";
+import FloatingCTA from "@/components/FloatingCTA";
 
 export default function Home() {
   return (
     <>
       <PageIllustration />
+      <FloatingCTA />
       <Hero />
       <IncomePotential />
       <Proof />

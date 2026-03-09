@@ -10,19 +10,19 @@ export default function Header() {
         <div className="relative flex h-14 items-center justify-between gap-3 rounded-2xl bg-gray-900/90 px-3 backdrop-blur">
 
           {/* Site branding */}
-          <div className="flex flex-1 items-center">
+          {/* <div className="flex flex-1 items-center">
             <Logo />
-          </div>
+          </div> */}
 
           {/* Navigation buttons */}
           <ul className="flex flex-1 items-center justify-end gap-3">
 
             <li>
               <Link
-                href="https://tally.so/r/Np7a5l"
+                href=""
                 className="btn-sm relative bg-blue-800 py-[5px] px-3 text-white rounded hover:bg-gray-700 transition-colors duration-300"
               >
-                Apply Now
+                Home
               </Link>
             </li>
 
