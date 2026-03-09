@@ -20,9 +20,9 @@ export default function Header() {
             <li>
               <Link
                 href="/signin"
-                className="btn-sm relative bg-gray-800 py-[5px] px-3 text-white rounded hover:bg-gray-700 transition-colors duration-300"
+                className="btn-sm relative bg-blue-800 py-[5px] px-3 text-white rounded hover:bg-gray-700 transition-colors duration-300"
               >
-                Sign In
+                Apply Now
               </Link>
             </li>
 
@@ -31,7 +31,7 @@ export default function Header() {
                 href="/#faq"
                 className="btn-sm relative border border-indigo-500 bg-indigo-800 py-[5px] px-4 text-white rounded shadow-sm hover:bg-indigo-600 hover:border-indigo-400 transition-all duration-300"
               >
-                FAQ
+                Frequently Asked Questions
               </Link>
             </li>
 
