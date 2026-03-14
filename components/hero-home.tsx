@@ -31,6 +31,25 @@ export default function HeroHome() {
     });
   }
 
+  function playVideo() {
+    // close popup first
+    setOpen(false);
+
+    // wait for popup animation then trigger video
+    setTimeout(() => {
+      const videoButton = document.querySelector("#video button") as HTMLElement;
+
+      if (videoButton) {
+        videoButton.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+
+        videoButton.click();
+      }
+    }, 300);
+  }
+
   return (
     <section>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -170,12 +189,12 @@ export default function HeroHome() {
             {/* HELP BUTTONS */}
             <div className="flex flex-wrap gap-3 mt-6">
 
-              <a
-                href="#video"
+              <button
+                onClick={playVideo}
                 className="px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700 text-sm"
               >
                 Watch Video
-              </a>
+              </button>
 
               <a
                 href="/#faq"
