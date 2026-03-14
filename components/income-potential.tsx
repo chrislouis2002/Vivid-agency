@@ -321,8 +321,9 @@ export default function IncomePotential() {
 
           {/* Apply Button */}
 
-          <div className="mt-16 flex justify-center">
+          
 
+          <div className="mt-16 flex justify-center">
             <a
               href="https://tally.so/r/Np7a5l"
               target="_blank"

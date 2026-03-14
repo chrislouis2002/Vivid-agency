@@ -1,12 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
-import ApplyPopup from "@/components/ApplyPopup";
+import ApplyButton from "@/components/ApplyButton";
 
 export default function LimitedPositions() {
-
-  const [open, setOpen] = useState(false);
 
   return (
 
@@ -62,16 +59,15 @@ export default function LimitedPositions() {
 
             {/* Apply Button */}
 
-            <button
-              onClick={() => setOpen(true)}
-              className="group inline-flex items-center justify-center rounded-xl bg-gradient-to-t from-indigo-600 to-indigo-500 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:from-indigo-500 hover:to-indigo-400"
-            >
+            <ApplyButton className="group inline-flex items-center justify-center rounded-xl bg-gradient-to-t from-indigo-600 to-indigo-500 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:from-indigo-500 hover:to-indigo-400">
+
               Apply Now
 
               <span className="ml-3 transition-transform group-hover:translate-x-1">
                 →
               </span>
-            </button>
+
+            </ApplyButton>
 
             <p className="text-sm text-indigo-200/50 mt-6">
               Applications usually fill quickly each contract period.
@@ -82,10 +78,6 @@ export default function LimitedPositions() {
         </motion.div>
 
       </div>
-
-      {/* Global Apply Popup */}
-
-      <ApplyPopup open={open} setOpen={setOpen} />
 
     </section>
   );
