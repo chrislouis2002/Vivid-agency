@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Spotlight from "@/components/spotlight";
+import ApplyButton from "@/components/ApplyButton";
 
 const streamers = [
   {
@@ -15,7 +16,7 @@ const streamers = [
   },
   {
     name: "Ivie",
-image: "/images/streamer2.jpg",
+    image: "/images/streamer2.jpg",
     earnings: 1560000,
     testimonial:
       "The daily allowance helped me so much while working. The support team was amazing.",
@@ -151,99 +152,73 @@ export default function IncomePotential() {
 
           <Spotlight className="group mx-auto grid max-w-sm items-start gap-6 lg:max-w-none lg:grid-cols-3">
 
-            {/* Salary */}
-
             <div className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-800 p-px">
               <div className="relative z-20 h-full rounded-[inherit] bg-gray-950 p-8">
-
                 <span className="text-sm font-semibold text-indigo-400">
                   Income Stream 1
                 </span>
-
                 <h3 className="mt-2 mb-3 text-xl font-semibold text-white">
                   Fixed Base Salary
                 </h3>
-
                 <p className="text-indigo-200/65 mb-4">
                   Every host receives a guaranteed monthly salary while working
                   with our agency.
                 </p>
-
                 <div className="text-3xl font-bold text-indigo-400 mb-2">
                   ₦450,000 / contract
                 </div>
-
                 <p className="text-indigo-200/65">
                   Paid every 3-month contract.
                 </p>
-
                 <div className="mt-3 text-xl font-semibold text-white">
                   ₦450,000 guaranteed
                 </div>
-
               </div>
             </div>
 
-            {/* Bonuses */}
-
             <div className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-800 p-px">
               <div className="relative z-20 h-full rounded-[inherit] bg-gray-950 p-8">
-
                 <span className="text-sm font-semibold text-indigo-400">
                   Income Stream 2
                 </span>
-
                 <h3 className="mt-2 mb-3 text-xl font-semibold text-white">
                   Performance Bonuses
                 </h3>
-
                 <p className="text-indigo-200/65 mb-4">
                   Each host has a target during the contract period.
                 </p>
-
                 <p className="text-indigo-200/65">
                   Once your target is reached, everything you earn above the
                   target becomes your bonus.
                 </p>
-
                 <div className="mt-4 text-lg font-semibold text-indigo-300">
                   100% of extra revenue goes to you
                 </div>
-
                 <p className="mt-4 text-indigo-200/65">
                   Paid together with your salary every 3 months.
                 </p>
-
               </div>
             </div>
 
-            {/* Daily Allowance */}
-
             <div className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-800 p-px">
               <div className="relative z-20 h-full rounded-[inherit] bg-gray-950 p-8">
-
                 <span className="text-sm font-semibold text-indigo-400">
                   Income Stream 3
                 </span>
-
                 <h3 className="mt-2 mb-3 text-xl font-semibold text-white">
                   Daily Cash Allowance
                 </h3>
-
                 <p className="text-indigo-200/65 mb-4">
                   Hosts receive daily cash allowances based on their daily
                   performance.
                 </p>
-
                 <div className="text-3xl font-bold text-green-400 mb-3">
                   10% Daily
                 </div>
-
                 <p className="text-indigo-200/65">
                   10% of everything you make that day is paid immediately for
                   daily expenses.
                 </p>
-
               </div>
             </div>
 
@@ -252,16 +227,13 @@ export default function IncomePotential() {
           {/* Testimonials */}
 
           <div className="mt-20 text-center">
-
             <h3 className="text-2xl font-semibold text-white mb-3">
               Streamers Who Completed Their Contracts
             </h3>
-
             <p className="text-indigo-200/65 mb-10">
               Real hosts who successfully finished their contracts and how
               much they earned.
             </p>
-
           </div>
 
           {/* Carousel */}
@@ -321,13 +293,9 @@ export default function IncomePotential() {
 
           {/* Apply Button */}
 
-          
-
           <div className="mt-16 flex justify-center">
-            <a
-              href="https://tally.so/r/Np7a5l"
-              target="_blank"
-              rel="noopener noreferrer"
+
+            <ApplyButton
               className="group relative inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-500 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:from-indigo-500 hover:to-indigo-400 hover:shadow-indigo-500/40"
             >
 
@@ -337,7 +305,7 @@ export default function IncomePotential() {
                 →
               </span>
 
-            </a>
+            </ApplyButton>
 
           </div>
 
