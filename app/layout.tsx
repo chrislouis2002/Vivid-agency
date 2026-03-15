@@ -1,4 +1,4 @@
-"use client";
+
 import "./css/style.css";
 
 import { Inter } from "next/font/google";
