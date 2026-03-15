@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 
 import Header from "@/components/ui/header";
 import { ApplyProvider } from "@/components/ApplyContext";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/next"
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
