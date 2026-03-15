@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 
 import Header from "@/components/ui/header";
 import { ApplyProvider } from "@/components/ApplyContext";
-
+import { Analytics } from "@vercel/analytics/react"
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -60,6 +60,7 @@ export default function RootLayout({
             {children}
           </div>
         </ApplyProvider>
+         <Analytics />
       </body>
     </html>
   );
