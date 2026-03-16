@@ -140,29 +140,29 @@ export default function ApplyPopup({ open, setOpen }: any) {
         </div>
 
         {/* ACTIONS */}
-        <div className="flex justify-between mt-8">
+        <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
 
-          <button
-            onClick={() => setOpen(false)}
-            className="text-indigo-300 text-sm hover:text-white"
-          >
-            Cancel
-          </button>
+  <button
+    onClick={() => setOpen(false)}
+    className="text-indigo-300 text-sm hover:text-white px-4 py-2"
+  >
+    Cancel
+  </button>
 
-          <a
-            href="https://tally.so/r/Np7a5l"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`px-6 py-2 rounded-lg text-white text-sm transition-all ${
-              allChecked
-                ? "bg-indigo-600 hover:bg-indigo-500"
-                : "bg-gray-700 pointer-events-none cursor-not-allowed"
-            }`}
-          >
-            I Understand - Continue Application
-          </a>
+  <a
+    href="https://tally.so/r/Np7a5l"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`px-6 py-2 rounded-lg text-white text-sm transition-all ${
+      allChecked
+        ? "bg-indigo-600 hover:bg-indigo-500"
+        : "bg-gray-700 pointer-events-none cursor-not-allowed"
+    }`}
+  >
+    I Understand - Continue Application
+  </a>
 
-        </div>
+</div>
 
       </div>
 
