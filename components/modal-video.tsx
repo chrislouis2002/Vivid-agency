@@ -87,7 +87,7 @@ export default function ModalVideo({
             <span className="text-sm font-medium leading-tight text-gray-300">
               Watch videos
               <span className="text-gray-600"> - </span>
-              3:47
+              0:43
             </span>
 
           </span>
@@ -111,16 +111,25 @@ export default function ModalVideo({
 
           <div className="mx-auto flex h-full max-w-6xl items-center">
 
-            <DialogPanel className="max-h-full w-full max-w-4xl overflow-hidden rounded-2xl bg-black shadow-2xl">
+            <DialogPanel className="relative max-h-full w-full max-w-4xl overflow-hidden rounded-2xl bg-black shadow-2xl">
 
-              <video
-                ref={videoRef}
-                width={videoWidth}
-                height={videoHeight}
-                loop
-                controls
-                className="w-full h-auto"
-              >
+  {/* CLOSE BUTTON */}
+  <button
+    onClick={() => setModalOpen(false)}
+    aria-label="Close video"
+    className="absolute top-3 right-3 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-black/70 text-white text-xl font-bold backdrop-blur hover:bg-black/90 active:scale-95 transition"
+  >
+    ✕
+  </button>
+
+  <video
+    ref={videoRef}
+    width={videoWidth}
+    height={videoHeight}
+    loop
+    controls
+    className="w-full h-auto"
+  >
                 <source src={video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
