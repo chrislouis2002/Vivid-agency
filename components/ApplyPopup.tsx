@@ -159,7 +159,7 @@ export default function ApplyPopup({ open, setOpen }: any) {
                 : "bg-gray-700 pointer-events-none cursor-not-allowed"
             }`}
           >
-            I Understand - Continue to Application
+            I Understand - Continue Application
           </a>
 
         </div>
