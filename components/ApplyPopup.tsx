@@ -61,9 +61,9 @@ export default function ApplyPopup({ open, setOpen }: any) {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/80 p-4">
+    <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/80 p-4 overflow-y-auto">
 
-      <div className="w-full max-w-xl rounded-2xl bg-gray-900 p-6 shadow-2xl border border-red-500/30">
+      <div className="w-full max-w-xl max-h-[90vh] overflow-y-auto rounded-2xl bg-gray-900 p-6 shadow-2xl border border-red-500/30">
 
         {/* WARNING HEADER */}
         <h2 className="flex items-center gap-2 text-2xl font-bold text-red-400 mb-3">
@@ -74,8 +74,8 @@ export default function ApplyPopup({ open, setOpen }: any) {
         <div className="bg-red-500/10 border border-red-500/40 rounded-lg p-4 mb-5">
 
           <p className="text-base font-semibold text-red-300 leading-relaxed">
-            This role involves <span className="text-white font-bold">private one-on-one Sex video calls </span> 
-             with paying customers.
+            This role involves <span className="text-white font-bold">private one-on-one Sex video calls</span> 
+            with paying customers.
           </p>
 
           <p className="text-base text-red-200 mt-2 leading-relaxed">
@@ -98,23 +98,23 @@ export default function ApplyPopup({ open, setOpen }: any) {
         {/* CHECKLIST */}
         <div className="space-y-4 text-sm text-indigo-200">
 
-          <label className="flex gap-3">
-            <input type="checkbox" onChange={() => toggleCheck("work")} />
-            I understand that this job involves adult live streaming and using may nakedness to make Men Orgasm through private video calls .
+          <label className="flex gap-3 items-start">
+            <input type="checkbox" onChange={() => toggleCheck("work")} className="mt-1" />
+            I understand that this job involves adult live streaming and using my nakedness to make men orgasm through private video calls.
           </label>
 
-          <label className="flex gap-3">
-            <input type="checkbox" onChange={() => toggleCheck("video")} />
+          <label className="flex gap-3 items-start">
+            <input type="checkbox" onChange={() => toggleCheck("video")} className="mt-1" />
             I confirm that I have watched the introduction video explaining the role.
           </label>
 
-          <label className="flex gap-3">
-            <input type="checkbox" onChange={() => toggleCheck("faq")} />
+          <label className="flex gap-3 items-start">
+            <input type="checkbox" onChange={() => toggleCheck("faq")} className="mt-1" />
             I confirm that I have read the Frequently Asked Questions section.
           </label>
 
-          <label className="flex gap-3">
-            <input type="checkbox" onChange={() => toggleCheck("accommodation")} />
+          <label className="flex gap-3 items-start">
+            <input type="checkbox" onChange={() => toggleCheck("accommodation")} className="mt-1" />
             I understand that living in the accommodation provided by the agency during the contract period is mandatory.
           </label>
 
