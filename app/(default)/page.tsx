@@ -20,7 +20,7 @@ import IncomePotential from "@/components/income-potential";
 import FAQ from "@/components/faq";
 import LimitedPositions from "@/components/limited-positions";
 import FloatingCTA from "@/components/FloatingCTA";
-
+import DayInLife from "@/components/DayInLife";
 export default function Home() {
   return (
     <>
@@ -30,10 +30,12 @@ export default function Home() {
       <IncomePotential />
       <Proof />
       <Workflows />
+       {/* <DayInLife /> */}
       <Features />
       <FAQ />
       <LimitedPositions />
       <Cta />
+     
     </>
   );
 }

@@ -43,32 +43,64 @@ export default function ApplyPopup({ open, setOpen }: any) {
     }, 300);
   }
 
+  function goToFAQ() {
+    setOpen(false);
+
+    setTimeout(() => {
+      const faqSection = document.querySelector("#faq") as HTMLElement;
+
+      if (faqSection) {
+        faqSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    }, 300);
+  }
+
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/70 p-4">
+    <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/80 p-4">
 
-      <div className="w-full max-w-xl rounded-2xl bg-gray-900 p-6 shadow-2xl">
+      <div className="w-full max-w-xl rounded-2xl bg-gray-900 p-6 shadow-2xl border border-red-500/30">
 
-        <h2 className="text-xl font-semibold text-white mb-2">
-          Important Before Applying
+        {/* WARNING HEADER */}
+        <h2 className="flex items-center gap-2 text-2xl font-bold text-red-400 mb-3">
+          ⚠️ Important Before Applying
         </h2>
 
-        <p className="text-indigo-200/70 text-sm mb-4">
-          This role involves private one-on-one online video sessions with
-          adult customers. Please ensure you fully understand the nature of
-          the work before continuing with your application.
-        </p>
+        {/* WARNING BOX */}
+        <div className="bg-red-500/10 border border-red-500/40 rounded-lg p-4 mb-5">
 
-        <div className="mb-6 text-sm text-indigo-300">
+          <p className="text-base font-semibold text-red-300 leading-relaxed">
+            This role involves <span className="text-white font-bold">private one-on-one Sex video calls </span> 
+             with paying customers.
+          </p>
+
+          <p className="text-base text-red-200 mt-2 leading-relaxed">
+            During these sessions you may be expected to <span className="font-bold text-white">
+            perform adult entertainment, including nudity and explicit behaviour on Video call
+            </span>.
+          </p>
+
+          <p className="text-sm text-red-200 mt-3">
+            Please read the checklist carefully and confirm you fully understand the nature of this work before applying.
+          </p>
+
+        </div>
+
+        {/* PROGRESS */}
+        <div className="mb-6 text-sm font-semibold text-indigo-300">
           Checklist completed: {totalChecked} / 4
         </div>
 
+        {/* CHECKLIST */}
         <div className="space-y-4 text-sm text-indigo-200">
 
           <label className="flex gap-3">
             <input type="checkbox" onChange={() => toggleCheck("work")} />
-            I understand the nature of the work and confirm I am comfortable performing the duties required.
+            I understand that this job involves adult live streaming and using may nakedness to make Men Orgasm through private video calls .
           </label>
 
           <label className="flex gap-3">
@@ -88,6 +120,7 @@ export default function ApplyPopup({ open, setOpen }: any) {
 
         </div>
 
+        {/* HELP BUTTONS */}
         <div className="flex flex-wrap gap-3 mt-6">
 
           <button
@@ -97,15 +130,16 @@ export default function ApplyPopup({ open, setOpen }: any) {
             Watch Video
           </button>
 
-          <a
-            href="/#faq"
+          <button
+            onClick={goToFAQ}
             className="px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700 text-sm"
           >
-            Read FAQ
-          </a>
+            Read Frequently Asked Questions
+          </button>
 
         </div>
 
+        {/* ACTIONS */}
         <div className="flex justify-between mt-8">
 
           <button
@@ -125,7 +159,7 @@ export default function ApplyPopup({ open, setOpen }: any) {
                 : "bg-gray-700 pointer-events-none cursor-not-allowed"
             }`}
           >
-            Continue to Application
+            I Understand - Continue to Application
           </a>
 
         </div>

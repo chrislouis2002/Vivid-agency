@@ -31,7 +31,17 @@ const faqs = [
   {
     question: "What do streamers actually do during their shifts?",
     answer:
-      "Streamers primarily interact with customers through private one-on-one video calls. Customers pay for your time and attention, and conversations can range from casual chatting to more flirtatious or adult-themed interactions. You are always in control of what you choose to do during the call."
+      "Streamers primarily interact with customers through private one-on-one video calls. Customers pay for your time and attention. The video call can range from sexy dancing,twerkking, stripping, fake masturbation and fake orgasms in order to make the customer satisfied . You are always in control of what you choose to do during the call."
+  },
+  {
+    question: "Do i have to show my face During the sex video call?",
+    answer:
+      "No you do not have to show your face during the video calls. We understand that privacy is important, and you can choose to keep your face hidden if you prefer. Many hosts use creative ways to maintain their anonymity while still providing an engaging experience for customers."
+  },
+  {
+    question: "Do i Provide what i need?",
+    answer:
+      "All you need is provided for you including streaming devices and equiment, Anonymous account to receive payments, annonymous streaming accounts and anonymous whatsapp numbers. Your safety and comfort are our top priorities, so we ensure you have everything you need to succeed without any personal risk or investment on your part."
   },
   {
     question: "Is the work physical or in-person?",
