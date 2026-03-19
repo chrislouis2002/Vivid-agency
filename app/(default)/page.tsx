@@ -21,6 +21,7 @@ import FAQ from "@/components/faq";
 import LimitedPositions from "@/components/limited-positions";
 import FloatingCTA from "@/components/FloatingCTA";
 import DayInLife from "@/components/DayInLife";
+import ReferralProgram from "@/components/ReferralProgram";
 export default function Home() {
   return (
     <>
@@ -34,6 +35,7 @@ export default function Home() {
       <Features />
       <FAQ />
       <LimitedPositions />
+      <ReferralProgram />
       <Cta />
      
     </>
