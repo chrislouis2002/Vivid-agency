@@ -23,7 +23,7 @@ export default function ReferralSection() {
   }
 
   return (
-    <section>
+    <section id="ReferralProgram">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
 
         <div className="py-20 md:py-28">
