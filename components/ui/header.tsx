@@ -22,6 +22,24 @@ export default function Header() {
     }, 250);
   }
 
+  function playVideo() {
+    // CLOSE MENU FIRST
+    setMenuOpen(false);
+
+    setTimeout(() => {
+      const videoButton = document.querySelector("#video button") as HTMLElement;
+
+      if (videoButton) {
+        videoButton.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+
+        videoButton.click();
+      }
+    }, 300);
+  }
+
   return (
     <header className="sticky top-0 z-50 mt-2 w-full md:mt-5">
 
@@ -115,14 +133,21 @@ export default function Header() {
           >
             Refer a Friend
           </button>
+
           <button
             onClick={() => goToSection("#workflows")}
             className="w-full text-left px-4 py-3 rounded-lg bg-gray-800 text-white hover:bg-gray-700 transition"
           >
-           How The Job Works
+            How The Job Works
           </button>
 
-          
+          {/* ✅ FIXED VIDEO BUTTON */}
+          <button
+            onClick={playVideo}
+            className="w-full text-left px-4 py-3 rounded-lg bg-gray-800 text-white hover:bg-gray-700 transition"
+          >
+            Watch Introduction Video
+          </button>
 
           <a
             href="https://wa.me/2349052854671"
