@@ -127,7 +127,7 @@ export default function IncomePotential() {
   }, []);
 
   return (
-    <section id="income-potential" className="py-20 md:py-28">
+    <section id="income-potential" className="">
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
 
@@ -135,7 +135,7 @@ export default function IncomePotential() {
 
           {/* HEADER */}
 
-          <div className="mx-auto max-w-3xl pt-20 pb-12 text-center md:pt-28 md:pb-16">
+          <div className="mx-auto max-w-3xl pt-15 pb-12 text-center md:pt-28 md:pb-16">
 
             <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
               Your Income Potential

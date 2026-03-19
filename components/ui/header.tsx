@@ -115,6 +115,12 @@ export default function Header() {
           >
             Refer a Friend
           </button>
+          <button
+            onClick={() => goToSection("#workflows")}
+            className="w-full text-left px-4 py-3 rounded-lg bg-gray-800 text-white hover:bg-gray-700 transition"
+          >
+           How The Job Works
+          </button>
 
           
 
