@@ -213,7 +213,7 @@ export default function Testimonials() {
 
           {/* Cards */}
           <div
-            className="mx-auto grid max-w-sm items-start gap-6 sm:max-w-none sm:grid-cols-2 lg:grid-cols-3"
+            className="mx-auto grid max-w-sm items-start gap-60 sm:max-w-none sm:grid-cols-2 lg:grid-cols-3"
             ref={masonryContainer}
           >
             {testimonials.map((testimonial, index) => (

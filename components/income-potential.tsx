@@ -40,35 +40,35 @@ const streamers = [
     image: "/images/streamer5.jpg",
     earnings: 680000,
     testimonial:
-      "I was nervous at first, but the training and support made everything easy. By the end of my contract, I had earned more than I expected.",
+      "I was nervous at first, but the training and support made everything easy.",
   },
   {
     name: "Lulu",
     image: "/images/streamer6.jpg",
     earnings: 1880000,
     testimonial:
-      "The daily allowance really helped me stay motivated. Seeing the money come in every day made a huge difference.",
+      "The daily allowance really helped me stay motivated.",
   },
   {
     name: "Ria",
     image: "/images/streamer7.jpg",
     earnings: 1050000,
     testimonial:
-      "joined hoping to make some extra money, but I ended up saving enough to pay off several bills.",
+      "I joined hoping to make extra money and paid off several bills.",
   },
   {
     name: "Ada",
     image: "/images/streamer8.jpg",
     earnings: 730000,
     testimonial:
-      "I didn’t realize how much opportunity there was until I finished my first contract. I’m already planning my next one.",
+      "I’m already planning my next contract.",
   },
   {
     name: "Oyinda",
     image: "/images/streamer9.jpg",
     earnings: 1350000,
     testimonial:
-      "The team helped me improve quickly, and once I passed my target the bonuses added up fast.",
+      "Once I passed my target the bonuses added up fast.",
   },
 ];
 
@@ -133,7 +133,7 @@ export default function IncomePotential() {
 
         <div className="pb-12 md:pb-20">
 
-          {/* Header */}
+          {/* HEADER */}
 
           <div className="mx-auto max-w-3xl pt-20 pb-12 text-center md:pt-28 md:pb-16">
 
@@ -142,101 +142,87 @@ export default function IncomePotential() {
             </h2>
 
             <p className="text-lg text-indigo-200/65">
-              Our hosts earn through three income streams that combine
-              guaranteed salary, performance bonuses, and daily allowances.
+              Our hosts earn through three income streams that combine guaranteed salary, bonuses, and daily allowances.
             </p>
 
           </div>
 
-          {/* Income Cards */}
+          {/* INCOME CARDS (FIXED HEIGHT) */}
 
-          <Spotlight className="group mx-auto grid max-w-sm items-start gap-6 lg:max-w-none lg:grid-cols-3">
+          <Spotlight className="group mx-auto grid max-w-sm items-stretch gap-6 lg:max-w-none lg:grid-cols-3">
 
-            <div className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-800 p-px">
-              <div className="relative z-20 h-full rounded-[inherit] bg-gray-950 p-8">
-                <span className="text-sm font-semibold text-indigo-400">
-                  Income Stream 1
-                </span>
-                <h3 className="mt-2 mb-3 text-xl font-semibold text-white">
-                  Fixed Base Salary
-                </h3>
-                <p className="text-indigo-200/65 mb-4">
-                  Every host receives a guaranteed monthly salary while working
-                  with our agency.
-                </p>
-                <div className="text-3xl font-bold text-indigo-400 mb-2">
-                  ₦450,000 / contract
-                </div>
-                <p className="text-indigo-200/65">
-                  Paid every 3-month contract.
-                </p>
-                <div className="mt-3 text-xl font-semibold text-white">
-                  ₦450,000 guaranteed
-                </div>
-              </div>
-            </div>
+            {[ 
+              {
+                title: "Fixed Base Salary",
+                desc: "Guaranteed monthly income during your contract.",
+                highlight: "₦450,000 / contract",
+                extra: "Paid every 3 months",
+              },
+              {
+                title: "Performance Bonuses",
+                desc: "Everything above your target becomes your bonus.",
+                highlight: "100% bonus earnings",
+                extra: "Unlimited upside",
+              },
+              {
+                title: "Daily Allowance",
+                desc: "Earn daily cash from your performance.",
+                highlight: "10% Daily",
+                extra: "Instant payouts",
+              },
+            ].map((card, i) => (
 
-            <div className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-800 p-px">
-              <div className="relative z-20 h-full rounded-[inherit] bg-gray-950 p-8">
-                <span className="text-sm font-semibold text-indigo-400">
-                  Income Stream 2
-                </span>
-                <h3 className="mt-2 mb-3 text-xl font-semibold text-white">
-                  Performance Bonuses
-                </h3>
-                <p className="text-indigo-200/65 mb-4">
-                  Each host has a target during the contract period.
-                </p>
-                <p className="text-indigo-200/65">
-                  Once your target is reached, everything you earn above the
-                  target becomes your bonus.
-                </p>
-                <div className="mt-4 text-lg font-semibold text-indigo-300">
-                  100% of extra revenue goes to you
-                </div>
-                <p className="mt-4 text-indigo-200/65">
-                  Paid together with your salary every 3 months.
-                </p>
-              </div>
-            </div>
+              <motion.div
+                key={i}
+                whileHover={{ scale: 1.05 }}
+                className="group/card relative flex h-full overflow-hidden rounded-2xl bg-gray-800 p-px"
+              >
 
-            <div className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-800 p-px">
-              <div className="relative z-20 h-full rounded-[inherit] bg-gray-950 p-8">
-                <span className="text-sm font-semibold text-indigo-400">
-                  Income Stream 3
-                </span>
-                <h3 className="mt-2 mb-3 text-xl font-semibold text-white">
-                  Daily Cash Allowance
-                </h3>
-                <p className="text-indigo-200/65 mb-4">
-                  Hosts receive daily cash allowances based on their daily
-                  performance.
-                </p>
-                <div className="text-3xl font-bold text-green-400 mb-3">
-                  10% Daily
+                <div className="flex flex-col justify-between w-full h-full rounded-[inherit] bg-gray-950 p-8">
+
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-3">
+                      {card.title}
+                    </h3>
+
+                    <p className="text-indigo-200/65 mb-4">
+                      {card.desc}
+                    </p>
+                  </div>
+
+                  <div>
+                    <div className="text-3xl font-bold text-indigo-400 mb-2">
+                      {card.highlight}
+                    </div>
+
+                    <p className="text-indigo-200/65">
+                      {card.extra}
+                    </p>
+                  </div>
+
                 </div>
-                <p className="text-indigo-200/65">
-                  10% of everything you make that day is paid immediately for
-                  daily expenses.
-                </p>
-              </div>
-            </div>
+
+              </motion.div>
+
+            ))}
 
           </Spotlight>
 
-          {/* Testimonials */}
+          {/* TESTIMONIALS */}
 
           <div className="mt-20 text-center">
+
             <h3 className="text-2xl font-semibold text-white mb-3">
               Streamers Who Completed Their Contracts
             </h3>
+
             <p className="text-indigo-200/65 mb-10">
-              Real hosts who successfully finished their contracts and how
-              much they earned.
+              Real results from real hosts.
             </p>
+
           </div>
 
-          {/* Carousel */}
+          {/* CAROUSEL (FIXED HEIGHT CARDS) */}
 
           <div className="relative">
 
@@ -252,12 +238,12 @@ export default function IncomePotential() {
                 <motion.div
                   key={i}
                   whileHover={{ scale: 1.05 }}
-                  className="min-w-[320px] rounded-2xl bg-gray-800 p-px"
+                  className="min-w-[320px] flex h-[220px] rounded-2xl bg-gray-800 p-px"
                 >
 
-                  <div className="rounded-[inherit] bg-gray-950 p-6">
+                  <div className="flex flex-col justify-between w-full h-full rounded-[inherit] bg-gray-950 p-6">
 
-                    <div className="flex items-center mb-4">
+                    <div className="flex items-center mb-3">
 
                       <Image
                         src={s.image}
@@ -277,7 +263,7 @@ export default function IncomePotential() {
 
                     </div>
 
-                    <p className="text-indigo-200/65 text-sm">
+                    <p className="text-indigo-200/65 text-sm line-clamp-3">
                       “{s.testimonial}”
                     </p>
 
@@ -291,13 +277,11 @@ export default function IncomePotential() {
 
           </div>
 
-          {/* Apply Button */}
+          {/* CTA */}
 
           <div className="mt-16 flex justify-center">
 
-            <ApplyButton
-              className="group relative inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-500 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:from-indigo-500 hover:to-indigo-400 hover:shadow-indigo-500/40"
-            >
+            <ApplyButton className="group relative inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-500 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105">
 
               Apply to Become a Host
 
