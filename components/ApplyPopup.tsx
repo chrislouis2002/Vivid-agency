@@ -150,7 +150,7 @@ export default function ApplyPopup({ open, setOpen }: any) {
   </button>
 
   <a
-    href="https://tally.so/r/Np7a5l"
+    href="https://tally.so/r/PdYArV"
     target="_blank"
     rel="noopener noreferrer"
     className={`px-6 py-2 rounded-lg text-white text-sm transition-all ${
