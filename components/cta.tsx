@@ -66,7 +66,7 @@ export default function Cta() {
               <div data-aos="fade-up" data-aos-delay={400}>
                 <a
                   className="btn group flex items-center justify-center w-full bg-[#25D366] text-white hover:bg-[#20b858] sm:w-auto"
-                  href="https://wa.me/2349052854671"
+                  href="https://wa.me/2349011076011"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
