@@ -103,7 +103,7 @@ export default function JobPreview() {
           <div className="rounded-2xl bg-gray-800 p-px">
             <div className="rounded-[inherit] bg-gray-950 p-4">
 
-              <h3 className="text-white font-semibold mb-3">
+             <h3 className="text-white font-bold text-lg sm:text-2xl md:text-3xl mb-3">
                 STEP 1. Go Live & Attract Viewers
               </h3>
 
@@ -146,7 +146,7 @@ export default function JobPreview() {
           <div className="rounded-2xl bg-gray-800 p-px">
             <div className="rounded-[inherit] bg-gray-950 p-4">
 
-              <h3 className="text-white font-semibold mb-3">
+              <h3 className="text-white font-bold text-lg sm:text-2xl md:text-3xl mb-3">
                STEP 2. Receive Messages & Payments
               </h3>
 
@@ -184,7 +184,7 @@ export default function JobPreview() {
           <div className="rounded-2xl bg-gray-800 p-px">
             <div className="rounded-[inherit] bg-gray-950 p-4">
 
-              <h3 className="text-white font-semibold mb-3">
+               <h3 className="text-white font-bold text-lg sm:text-2xl md:text-3xl mb-3">
                STEP 3. Private Paid Video Call
               </h3>
 
