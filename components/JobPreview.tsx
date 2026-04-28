@@ -61,15 +61,15 @@ export default function JobPreview() {
   }, []);
 
   /* SLIDER AUTO CHANGE */
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) =>
-        prev === dmScreenshots.length - 1 ? 0 : prev + 1
-      );
-    }, 3000);
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setCurrentSlide((prev) =>
+//         prev === dmScreenshots.length - 1 ? 0 : prev + 1
+//       );
+//     }, 3000);
 
-    return () => clearInterval(interval);
-  }, []);
+//     return () => clearInterval(interval);
+//   }, []);
 
   function nextSlide() {
     setCurrentSlide((prev) =>
@@ -104,7 +104,7 @@ export default function JobPreview() {
             <div className="rounded-[inherit] bg-gray-950 p-4">
 
               <h3 className="text-white font-semibold mb-3">
-                1. Go Live & Attract Viewers
+                STEP 1. Go Live & Attract Viewers
               </h3>
 
               <div className="relative h-[500px] rounded-xl overflow-hidden">
@@ -147,7 +147,7 @@ export default function JobPreview() {
             <div className="rounded-[inherit] bg-gray-950 p-4">
 
               <h3 className="text-white font-semibold mb-3">
-                2. Receive Messages & Payments
+               STEP 2. Receive Messages & Payments
               </h3>
 
               <div className="relative h-[500px] rounded-xl overflow-hidden bg-black">
@@ -185,7 +185,7 @@ export default function JobPreview() {
             <div className="rounded-[inherit] bg-gray-950 p-4">
 
               <h3 className="text-white font-semibold mb-3">
-                3. Private Paid Video Call
+               STEP 3. Private Paid Video Call
               </h3>
 
               <div className="relative h-[500px] rounded-xl overflow-hidden">
