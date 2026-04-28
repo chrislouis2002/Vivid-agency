@@ -59,7 +59,7 @@ export default function HeroHome() {
                 <div data-aos="fade-up" data-aos-delay={600}>
                   <a
                     className="btn relative w-full bg-green-600 text-white shadow-lg hover:bg-green-700 sm:w-auto transition-colors duration-300"
-                    href="https://wa.me/2349011076011"
+                    href="https://wa.me/2349137385418"
                     target="_blank"
                   >
                     Chat Admin

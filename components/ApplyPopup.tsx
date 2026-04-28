@@ -74,8 +74,8 @@ export default function ApplyPopup({ open, setOpen }: any) {
         <div className="bg-red-500/10 border border-red-500/40 rounded-lg p-4 mb-5">
 
           <p className="text-base font-semibold text-red-300 leading-relaxed">
-            This role involves <span className="text-white font-bold">private one-on-one Sex video calls</span> 
-            with paying customers.
+            This role involves <span className="text-white font-bold">private one-on-one Virtual Sex calls </span>  
+             with paying customers.
           </p>
 
           <p className="text-base text-red-200 mt-2 leading-relaxed">
@@ -100,7 +100,7 @@ export default function ApplyPopup({ open, setOpen }: any) {
 
           <label className="flex gap-3 items-start">
             <input type="checkbox" onChange={() => toggleCheck("work")} className="mt-1" />
-            I understand that this job involves adult live streaming and using my nakedness to make men orgasm through private video calls.
+            I understand that this job involves adult live streaming and one-on-one Virtual Sex calls.
           </label>
 
           <label className="flex gap-3 items-start">

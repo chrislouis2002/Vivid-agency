@@ -22,6 +22,7 @@ import LimitedPositions from "@/components/limited-positions";
 import FloatingCTA from "@/components/FloatingCTA";
 import DayInLife from "@/components/DayInLife";
 import ReferralProgram from "@/components/ReferralProgram";
+import JobPreview from "@/components/JobPreview";
 export default function Home() {
   return (
     <>
@@ -30,7 +31,8 @@ export default function Home() {
       <Hero />
       <IncomePotential />
       <Proof />
-      <Workflows />
+      <JobPreview/>
+      {/* <Workflows /> */}
        {/* <DayInLife /> */}
       <Features />
       <FAQ />
