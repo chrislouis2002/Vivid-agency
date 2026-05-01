@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Become a Live Streaming Host in Nigeria | ₦450,000 Salary | Vivid Agency",
+  title: "Become a Live Streaming Host in Nigeria | ₦500,000 Salary | Vivid Agency",
   description:
-    "Join Vivid Agency as a professional live streaming host in Nigeria. Accommodation, equipment and training provided. Earn ₦450,000 base income plus quarterly bonuses.",
+    "Join Vivid Agency as a professional live streaming host in Nigeria. Accommodation, equipment and training provided. Earn ₦500,000 base income plus quarterly bonuses.",
   openGraph: {
     title: "Live Streaming Host Opportunity | Vivid Agency",
     description:

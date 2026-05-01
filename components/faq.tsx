@@ -6,12 +6,12 @@ const faqs = [
   {
     question: "How much can I realistically earn?",
     answer:
-      "Every host receives a guaranteed base salary of ₦150,000 per month. Contracts run for 3 months, meaning ₦450,000 guaranteed per contract. Many hosts also earn additional bonuses once they exceed their targets."
+      "Every host receives a guaranteed base salary. Contracts run for 3 months, meaning ₦500,000 guaranteed per contract. Many hosts also earn additional bonuses once they exceed their targets."
   },
   {
     question: "How is the salary paid?",
     answer:
-      "Base salary is paid at the end of each 3-month contract. This totals ₦450,000 guaranteed for every completed contract."
+      "Base salary is paid at the end of each 3-month contract. This totals ₦500,000 guaranteed for every completed contract."
   },
   {
     question: "What are performance targets?",

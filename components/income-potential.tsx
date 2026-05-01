@@ -155,7 +155,7 @@ export default function IncomePotential() {
               {
                 title: "Fixed Base Salary",
                 desc: "Guaranteed monthly income during your contract.",
-                highlight: "₦450,000 / contract",
+                highlight: "₦500,000 / contract",
                 extra: "Paid every 3 months",
               },
               {

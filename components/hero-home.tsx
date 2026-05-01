@@ -32,7 +32,7 @@ export default function HeroHome() {
                 data-aos="fade-up"
                 data-aos-delay={200}
               >
-                Earn a base income of <span className=" text-2xl font-bold text-red-400 mb-3">₦450,000</span> with bonus income every 3 months.
+                Earn a base income of <span className=" text-2xl font-bold text-red-400 mb-3">₦500,000</span> with bonus income every 3 months.
                 Accommodation, equipment and training provided.
               </p>
 
