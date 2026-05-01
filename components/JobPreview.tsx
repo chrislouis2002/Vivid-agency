@@ -142,43 +142,68 @@ export default function JobPreview() {
             </div>
           </div>
 
-          {/* STEP 2 */}
-          <div className="rounded-2xl bg-gray-800 p-px">
-            <div className="rounded-[inherit] bg-gray-950 p-4">
+         {/* STEP 2 */}
+<div className="rounded-2xl bg-gray-800 p-px">
+  <div className="rounded-[inherit] bg-gray-950 p-4">
 
-              <h3 className="text-white font-bold text-lg sm:text-2xl md:text-3xl mb-3">
-               STEP 2. Receive Messages & Payments
-              </h3>
+    <h3 className="text-white font-bold text-lg sm:text-2xl md:text-3xl mb-3">
+      STEP 2. Receive Messages & Payments
+    </h3>
 
-              <div className="relative h-[500px] rounded-xl overflow-hidden bg-black">
+    <div className="relative h-[500px] rounded-xl overflow-hidden bg-black">
 
-                <Image
-                  src={dmScreenshots[currentSlide]}
-                  alt="DM screenshot"
-                  fill
-                  className="object-cover"
-                />
+      {/* SWIPE CONTAINER */}
+      <motion.div
+        className="flex h-full"
+        drag="x"
+        dragConstraints={{ left: 0, right: 0 }}
+        onDragEnd={(e, info) => {
+          if (info.offset.x < -100) {
+            nextSlide(); // swipe left
+          } else if (info.offset.x > 100) {
+            prevSlide(); // swipe right
+          }
+        }}
+        animate={{ x: `-${currentSlide * 100}%` }}
+        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+      >
 
-                <div className="absolute inset-0 bg-black/20" />
-
-                <button
-                  onClick={prevSlide}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 text-white px-2 py-1 rounded"
-                >
-                  ←
-                </button>
-
-                <button
-                  onClick={nextSlide}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 text-white px-2 py-1 rounded"
-                >
-                  →
-                </button>
-
-              </div>
-
-            </div>
+        {dmScreenshots.map((img, i) => (
+          <div key={i} className="relative min-w-full h-full">
+            <Image
+              src={img}
+              alt={`DM ${i}`}
+              fill
+              className="object-cover"
+            />
           </div>
+        ))}
+
+      </motion.div>
+
+      {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-black/20 pointer-events-none" />
+
+      {/* LEFT BUTTON */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 text-white px-3 py-2 rounded"
+      >
+        ←
+      </button>
+
+      {/* RIGHT BUTTON */}
+      <button
+        onClick={nextSlide}
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 text-white px-3 py-2 rounded"
+      >
+        →
+      </button>
+
+    </div>
+
+  </div>
+</div>
 
           {/* STEP 3 */}
           <div className="rounded-2xl bg-gray-800 p-px">
