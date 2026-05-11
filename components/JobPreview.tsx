@@ -43,14 +43,15 @@ const dmScreenshots = [
 ];
 
 export default function JobPreview() {
-
   const [viewers, setViewers] = useState(300);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  /* VIEWERS RANDOM CHANGE */
+  /* RANDOM VIEWERS */
   useEffect(() => {
     const update = () => {
-      setViewers(Math.floor(Math.random() * (1200 - 300 + 1)) + 300);
+      setViewers(
+        Math.floor(Math.random() * (1200 - 300 + 1)) + 300
+      );
     };
 
     update();
@@ -59,17 +60,6 @@ export default function JobPreview() {
 
     return () => clearInterval(interval);
   }, []);
-
-  /* SLIDER AUTO CHANGE */
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrentSlide((prev) =>
-//         prev === dmScreenshots.length - 1 ? 0 : prev + 1
-//       );
-//     }, 3000);
-
-//     return () => clearInterval(interval);
-//   }, []);
 
   function nextSlide() {
     setCurrentSlide((prev) =>
@@ -92,6 +82,7 @@ export default function JobPreview() {
           <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
             See Exactly How You Will Make Money
           </h2>
+
           <p className="text-indigo-200/70">
             This is what your daily workflow looks like.
           </p>
@@ -103,7 +94,7 @@ export default function JobPreview() {
           <div className="rounded-2xl bg-gray-800 p-px">
             <div className="rounded-[inherit] bg-gray-950 p-4">
 
-             <h3 className="text-white font-bold text-lg sm:text-2xl md:text-3xl mb-3">
+              <h3 className="text-white font-bold text-lg sm:text-2xl md:text-3xl mb-3">
                 STEP 1. Go Live & Attract Viewers
               </h3>
 
@@ -124,7 +115,6 @@ export default function JobPreview() {
                   LIVE
                 </div>
 
-                {/* ✅ FIXED VIEWERS */}
                 <div className="absolute top-2 right-2 text-white text-xs">
                   👁 {viewers}
                 </div>
@@ -142,75 +132,113 @@ export default function JobPreview() {
             </div>
           </div>
 
-         {/* STEP 2 */}
-<div className="rounded-2xl bg-gray-800 p-px">
-  <div className="rounded-[inherit] bg-gray-950 p-4">
+          {/* STEP 2 */}
+          <div className="rounded-2xl bg-gray-800 p-px">
+            <div className="rounded-[inherit] bg-gray-950 p-4">
 
-    <h3 className="text-white font-bold text-lg sm:text-2xl md:text-3xl mb-3">
-      STEP 2. Receive Messages & Payments
-    </h3>
+              <h3 className="text-white font-bold text-lg sm:text-2xl md:text-3xl mb-3">
+                STEP 2. Receive Messages & Payments
+              </h3>
 
-    <div className="relative h-[500px] rounded-xl overflow-hidden bg-black">
+              <div className="relative h-[500px] rounded-xl overflow-hidden bg-black">
 
-      {/* SWIPE CONTAINER */}
-      <motion.div
-        className="flex h-full"
-        drag="x"
-        dragConstraints={{ left: 0, right: 0 }}
-        onDragEnd={(e, info) => {
-          if (info.offset.x < -100) {
-            nextSlide(); // swipe left
-          } else if (info.offset.x > 100) {
-            prevSlide(); // swipe right
-          }
-        }}
-        animate={{ x: `-${currentSlide * 100}%` }}
-        transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      >
+                {/* SLIDER */}
+                <motion.div
+                  className="flex h-full"
 
-        {dmScreenshots.map((img, i) => (
-          <div key={i} className="relative min-w-full h-full">
-            <Image
-              src={img}
-              alt={`DM ${i}`}
-              fill
-              className="object-cover"
-            />
-          </div>
-        ))}
+                  onTouchStart={(e) => {
+                    const touch = e.touches[0];
+                    (e.currentTarget as any).startX = touch.clientX;
+                  }}
 
-      </motion.div>
+                  onTouchEnd={(e) => {
+                    const touch = e.changedTouches[0];
+                    const startX = (e.currentTarget as any).startX;
 
-      {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/20 pointer-events-none" />
+                    const diff = touch.clientX - startX;
 
-      {/* LEFT BUTTON */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 text-white px-3 py-2 rounded"
-      >
-        ←
-      </button>
+                    // swipe left
+                    if (diff < -50) {
+                      nextSlide();
+                    }
 
-      {/* RIGHT BUTTON */}
-      <button
-        onClick={nextSlide}
-        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 text-white px-3 py-2 rounded"
-      >
-        →
-      </button>
+                    // swipe right
+                    if (diff > 50) {
+                      prevSlide();
+                    }
+                  }}
 
-    </div>
+                  animate={{
+                    x: `-${currentSlide * 100}%`,
+                  }}
 
-  </div>
+                  transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 30,
+                  }}
+                >
+
+                  {dmScreenshots.map((img, index) => (
+                    <div
+                      key={index}
+                      className="relative min-w-full h-full select-none"
+                    >
+                      <Image
+                        src={img}
+                        alt={`WhatsApp chat ${index + 1}`}
+                        fill
+                        draggable={false}
+                        className="object-cover pointer-events-none"
+                      />
+                    </div>
+                  ))}
+
+                </motion.div>
+
+                {/* ARROWS */}
+                <button
+                  onClick={prevSlide}
+                  className="absolute left-3 top-1/2 -translate-y-1/2 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur hover:bg-black/80 transition"
+                >
+                  ←
+                </button>
+
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur hover:bg-black/80 transition"
+                >
+                  →
+                </button>
+
+               {/* INSTAGRAM STYLE DOTS */}
+<div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 items-center gap-1.5">
+
+  {dmScreenshots.map((_, index) => (
+    <button
+      key={index}
+      onClick={() => setCurrentSlide(index)}
+      className={`h-2 w-2 rounded-full transition-all duration-300 ${
+        currentSlide === index
+          ? "bg-white scale-125"
+          : "bg-white/40"
+      }`}
+    />
+  ))}
+
 </div>
+
+              </div>
+
+            </div>
+          </div>
 
           {/* STEP 3 */}
           <div className="rounded-2xl bg-gray-800 p-px">
             <div className="rounded-[inherit] bg-gray-950 p-4">
 
-               <h3 className="text-white font-bold text-lg sm:text-2xl md:text-3xl mb-3">
-               STEP 3. Private Paid Video Call
+              <h3 className="text-white font-bold text-lg sm:text-2xl md:text-3xl mb-3">
+                STEP 3. Private Paid Video Call
               </h3>
 
               <div className="relative h-[500px] rounded-xl overflow-hidden">
@@ -227,10 +255,15 @@ export default function JobPreview() {
                 <div className="absolute inset-0 bg-black/50" />
 
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-                  <div className="text-sm">🔒 Private 1-on-1 Session</div>
+
+                  <div className="text-sm">
+                    🔒 Private 1-on-1 Session
+                  </div>
+
                   <div className="text-indigo-300 text-xs mt-2">
                     Higher payments happen here
                   </div>
+
                 </div>
 
               </div>

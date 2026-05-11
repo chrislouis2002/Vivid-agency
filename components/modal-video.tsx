@@ -76,7 +76,8 @@ export default function ModalVideo({
 
   {/* TEXT */}
   <span className="mt-3 text-sm font-semibold text-white tracking-wide bg-white/10 px-3 py-1 rounded-full backdrop-blur-md border border-white/20 transition-all duration-300 group-hover:bg-indigo-600 group-hover:text-white group-hover:scale-105">
-    Watch Video
+    Play me!
+  
   </span>
 
 </span>
