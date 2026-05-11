@@ -53,46 +53,33 @@ export default function ModalVideo({
         </figure>
 
         {/* Play Button */}
-        <span className="pointer-events-none absolute p-2.5 before:absolute before:inset-0 before:rounded-full before:bg-gray-950 before:duration-300 group-hover:before:scale-110">
+<span className="pointer-events-none absolute flex flex-col items-center">
 
-          <span className="relative flex items-center gap-3">
+  {/* BUTTON */}
+  <span className="relative flex items-center justify-center h-16 w-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-indigo-500/40">
 
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={20}
-              height={20}
-              fill="none"
-            >
-              <path
-                fill="url(#pla)"
-                fillRule="evenodd"
-                d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10Zm3.5-10-5-3.5v7l5-3.5Z"
-                clipRule="evenodd"
-              />
-              <defs>
-                <linearGradient
-                  id="pla"
-                  x1={10}
-                  x2={10}
-                  y1={0}
-                  y2={20}
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stopColor="#6366F1" />
-                  <stop offset={1} stopColor="#6366F1" stopOpacity=".72" />
-                </linearGradient>
-              </defs>
-            </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={26}
+      height={26}
+      fill="none"
+    >
+      <path
+        fill="white"
+        fillRule="evenodd"
+        d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10Zm3.5-10-5-3.5v7l5-3.5Z"
+        clipRule="evenodd"
+      />
+    </svg>
 
-            <span className="text-sm font-medium leading-tight text-gray-300">
-              Watch videos
-              <span className="text-gray-600"> - </span>
-              0:43
-            </span>
+  </span>
 
-          </span>
+  {/* TEXT */}
+  <span className="mt-3 text-sm font-semibold text-white tracking-wide bg-white/10 px-3 py-1 rounded-full backdrop-blur-md border border-white/20 transition-all duration-300 group-hover:bg-indigo-600 group-hover:text-white group-hover:scale-105">
+    Watch Video
+  </span>
 
-        </span>
+</span>
 
       </button>
 
